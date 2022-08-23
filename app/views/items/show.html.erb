@@ -1,0 +1,14 @@
+<h1>Name: <%= @item.name %></h1>
+<p>Color: <%= @item.color %></p>
+<p>Identifier: <%= @item.identifier %></p>
+<p>Description: <%= @item.description %></p>
+<p>Notes: <%= @item.notes %></p>
+
+<%= link_to "Home", items_path(@item) %>
+<%= link_to "Edit", edit_item_path(@item) %>
+<%= link_to "Destroy", item_path(@item), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+
+                  
